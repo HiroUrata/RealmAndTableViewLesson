@@ -13,9 +13,9 @@ class RealmDatas:Object{
     @objc dynamic var schedule = String()
 }
 
-class RealmListData:RealmDatas{
+class RealmListData:Object{
     
-    let dateList = List<RealmDatas>()
-    let scheduleList = List<RealmDatas>()
+    let dateAndScheduleList = List<RealmDatas>()
+    //let scheduleList = List<RealmDatas>()
     
 }
