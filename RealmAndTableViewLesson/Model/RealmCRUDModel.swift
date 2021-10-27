@@ -24,16 +24,13 @@ extension RealmCRUDModel{
         guard let date = createDate else { return }
         guard let schedule = createSchedule else { return }
         
-        print(date)
-        print(schedule)
         do{
             let listDatas = RealmDatas(value: ["date":date,"schedule":schedule])
-            
+
             try realm.write({
                 
                 realmListData.dateAndScheduleList.append(listDatas)
                 realm.add(realmListData)
-                print(realm.objects(RealmDatas.self))
             })
             
         }catch{
@@ -48,12 +45,14 @@ extension RealmCRUDModel{
     
     open func readRealmData(){
         
-            readResultArray = []
+        readResultArray = []
             
-            realm.objects(RealmDatas.self).forEach { getDatas in
-                
+//        readResultArray = realmListData.dateAndScheduleList.map({["readRealmDate":$0.date,"readRealmschedule":$0.schedule]})
+        
+        realm.objects(RealmDatas.self).forEach { getDatas in
+
                 readResultArray.append(["readRealmDate":getDatas.date,"readRealmschedule":getDatas.schedule])
-            }
+        }
         
     }
 }

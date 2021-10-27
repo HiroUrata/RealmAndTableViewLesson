@@ -18,9 +18,13 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        realmCRUDModel.readRealmData()
        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
         
     }
 
@@ -29,7 +33,6 @@ class ViewController: UIViewController{
         realmCRUDModel.createRealmData(createDate: dateTextField.text, createSchedule: scheduleTextField.text)
         
         realmCRUDModel.readRealmData()
-        print(realmCRUDModel.readResultArray)
         tableView.reloadData()
     }
     
@@ -63,8 +66,8 @@ extension ViewController:UITableViewDataSource{
         cellDateLabel.text = realmCRUDModel.readResultArray[indexPath.row]["readRealmDate"]
         cellScheduleLabel.text = realmCRUDModel.readResultArray[indexPath.row]["readRealmschedule"]
         
-        cellDateLabel.layer.cornerRadius =  20.0
-        cellDateLabel.layer.masksToBounds = false
+        cellDateLabel.layer.cornerRadius = 53.5
+        cellDateLabel.layer.masksToBounds = true
         
         return cell
     }

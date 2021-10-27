@@ -36,6 +36,7 @@
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="XdK-bN-0cY">
                                 <rect key="frame" x="0.0" y="345" width="414" height="551"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="129" id="ZvM-40-vU2">
                                         <rect key="frame" x="20" y="49.5" width="374" height="129"/>
@@ -44,23 +45,38 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="129"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6Y-PZ-VTP">
-                                                    <rect key="frame" x="20" y="11" width="130" height="107"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6Y-PZ-VTP">
+                                                    <rect key="frame" x="20" y="11" width="107" height="107"/>
                                                     <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="107" id="0OX-ad-3Rw"/>
+                                                        <constraint firstAttribute="width" constant="107" id="OLj-NK-vbm"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Schedule" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1n-bZ-AVz">
-                                                    <rect key="frame" x="158" y="11" width="196" height="107"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1n-bZ-AVz">
+                                                    <rect key="frame" x="135" y="11" width="219" height="107"/>
                                                     <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="107" id="0KV-ak-mlj"/>
+                                                        <constraint firstAttribute="width" constant="219" id="Fwv-es-AHN"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="y1n-bZ-AVz" secondAttribute="trailing" constant="20" id="3eN-2t-Vt5"/>
+                                                <constraint firstItem="y1n-bZ-AVz" firstAttribute="leading" secondItem="o6Y-PZ-VTP" secondAttribute="trailing" constant="8" id="Jg5-ee-bTo"/>
+                                                <constraint firstItem="y1n-bZ-AVz" firstAttribute="top" secondItem="3bm-kD-03Y" secondAttribute="top" constant="11" id="Uee-Ga-ibF"/>
+                                                <constraint firstAttribute="bottom" secondItem="o6Y-PZ-VTP" secondAttribute="bottom" constant="11" id="XN9-x6-9Lb"/>
+                                                <constraint firstItem="o6Y-PZ-VTP" firstAttribute="leading" secondItem="3bm-kD-03Y" secondAttribute="leading" constant="20" id="dk1-P2-VQi"/>
+                                                <constraint firstAttribute="bottom" secondItem="y1n-bZ-AVz" secondAttribute="bottom" constant="11" id="fd2-lc-jOX"/>
+                                                <constraint firstItem="o6Y-PZ-VTP" firstAttribute="top" secondItem="3bm-kD-03Y" secondAttribute="top" constant="11" id="gN3-Lk-nrD"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
